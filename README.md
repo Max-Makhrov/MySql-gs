@@ -1,5 +1,5 @@
 # MySql-gs
-Connect your MySql database with Google Sheets
+Connect your MySql database with Google Sheets.
 
 Create a copy of this sample file:
 
@@ -20,5 +20,5 @@ Usage
 ---
 Google Sheets Magic: [https://sheetswithmaxmakhrov.wordpress.com](https://sheetswithmaxmakhrov.wordpress.com)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDg0NDQ0NTBdfQ==
+eyJoaXN0b3J5IjpbLTc3NzE1MzM0Ml19
 -->
