@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Connect to MySql</title>
+</head>
+
+<body style="background-color: rgb(252, 252, 249)">
+    
+    <!-- form -->
+    <div class="container">
+        <form method="get " action=" " autocomplete="off">            
+
+
+			<!-- Connection questions -->
+			<div class="col connectionGroup" id="connectionGroup">
+                <!-- host -->  
+                <div class="form-group connectionGroup-gr">
+                    <label for="host">Host Name or IP</label>
+                    <input id="host" class="form-control" type="text" name="" required>
+                </div>
+                <!-- database --> 
+                <div class="form-group connectionGroup-gr">
+                    <label for="database">Database</label>
+                    <input id="database" class="form-control" type="text" name="" required>
+                </div>
+                <!-- username -->
+                <div class="form-group connectionGroup-gr">
+                    <label for="username">Username</label>
+                    <input id="username" class="form-control" type="text" name="" required>
+                </div>
+                 <!-- password --> 
+                <div class="form-group connectionGroup-gr">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" type="password" name="" required>
+                </div>               
+            </div>
+            
+            
+			<!-- buttons -->
+            <div class="row" id="buttons">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        function updateInterface(data) 
+        {
+            const form = document.forms[0];       // get the form
+            form.onsubmit = getFormResults;       // set function on form submit
+            setDafaultValues(data);
+
+			// function runs on submit
+            function getFormResults(e) {
+                let response = { };
+                // get all input data into object
+                for (let input of document.querySelectorAll("input")) {
+                    if (input.value) {
+                        response[input.id] = input.value
+                    }
+                }
+                google.script.run.withSuccessHandler(google.script.host.close).getMySqlConnectionResponse(response)
+                    //google.script.run.getResp(response)
+                    //  google.script.host.close()
+            }
+            
+            function setDafaultValues(data)
+            {
+                if (!data) { return -1; } // no data
+                for (var key in data)
+                {
+                    var element = document.getElementById(key)
+                    {
+                       element.value = data[key];
+                    }
+                }
+            }
+        }
+        google.script.run.withSuccessHandler(updateInterface).getMainMySqlData();
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+</body>
+
+</html>
