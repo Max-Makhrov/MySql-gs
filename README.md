@@ -17,7 +17,8 @@ Usage
 4. Get the data from `MySql base: 🛢️ MySql > ✔️ Update active sheet`
 
 
+---
 Google Sheets Magic: [https://sheetswithmaxmakhrov.wordpress.com](https://sheetswithmaxmakhrov.wordpress.com)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDM4MzU4M119
+eyJoaXN0b3J5IjpbLTEwNDg0NDQ0NTBdfQ==
 -->
