@@ -1,7 +1,7 @@
 // C O N N E C T
 function getDBConnection_(data)
 {
-  data = data || getMySqlConnectionData_()
+  data = data || getMySqlConnectionData_();
   // getCloudSqlConnection
   var conn = Jdbc.getConnection('jdbc:mysql://' + data.host + ':3306/' + data.database + '?characterEncoding=UTF-8', data.username, data.password);  
                              //  dbName?characterEncoding=UTF-8

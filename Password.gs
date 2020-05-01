@@ -33,6 +33,11 @@ function saveElementToUserMemory_(key, value)
   var props = getGoogleProperties_();
   props.setProperty(key, value);  
 }
+function clearMySqlPassword()
+{
+  var props = getGoogleProperties_();  
+  props.deleteProperty(getPropertiesMySqlKey_());
+}
 
 
 //  ______                   
