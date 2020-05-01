@@ -1,3 +1,5 @@
+// https://github.com/Max-Makhrov/MySql-gs
+
 // C O N N E C T
 function getDBConnection_(data)
 {
