@@ -63,7 +63,8 @@ var C_TYPES_FUNCTIONS =
       'TINYINT':           'getLong',
       'FLOAT':             'getDouble',
       'DOUBLE':            'getDouble',
-      'MEDIUMBLOB':        'getString'
+      'MEDIUMBLOB':        'getString',
+      'SMALLINT':          'getLong'
     };
 function getSelectAsTable_(sql, noHeaders)
 {  
