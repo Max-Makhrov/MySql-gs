@@ -17,10 +17,3 @@ Usage:
 4. Get the data from MySql base: `🛢️ MySql > ✔️ Update active sheet`
 
 Security note: your password and connection string are safe. The script uses `PropertiesService.getUserProperties()` to store your secret information. Your Google Account is the only place from where this information available.
-
-
----
-Google Sheets Magic: [https://sheetswithmaxmakhrov.wordpress.com](https://sheetswithmaxmakhrov.wordpress.com)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg2NzYyNDQxLC0yMjg2Mjc3MzNdfQ==
--->
